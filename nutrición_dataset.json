@@ -1,0 +1,322 @@
+[
+  {
+    "prompt": "¿Por qué es importante tomar desayuno antes de ir al colegio?",
+    "response": "Porque el desayuno te da energía para aprender, jugar y concentrarte mejor en clase. Un desayuno sano puede incluir fruta, pan integral y un vaso de leche."
+  },
+  {
+    "prompt": "¿Qué pasa si como muchos dulces todos los días?",
+    "response": "Comer demasiados dulces puede dañar tus dientes y hacer que te sientas sin energía. Es mejor comer frutas dulces como plátano o papaya."
+  },
+  {
+    "prompt": "Mi mamá me dio quinua, ¿eso es bueno?",
+    "response": "¡Sí! La quinua es un alimento peruano muy nutritivo que te ayuda a crecer fuerte porque tiene proteínas y vitaminas."
+  },
+  {
+    "prompt": "¿Por qué debemos tomar agua en lugar de gaseosas?",
+    "response": "El agua hidrata tu cuerpo sin azúcar ni químicos, mientras que las gaseosas pueden dañar tus dientes y darte mucha sed después."
+  },
+  {
+    "prompt": "¿Para qué sirve comer verduras verdes?",
+    "response": "Las verduras verdes como el brócoli y la espinaca te ayudan a tener defensas fuertes y te llenan de vitaminas."
+  },
+  {
+    "prompt": "¿Puedo comer arroz todos los días?",
+    "response": "Sí, pero trata de combinarlo con legumbres, verduras o un pedacito de carne para que tu nutrición sea completa."
+  },
+  {
+    "prompt": "¿Es bueno comer pescado como la trucha?",
+    "response": "Sí, el pescado como la trucha tiene proteínas y grasas buenas que ayudan a tu cerebro y a tus músculos."
+  },
+  {
+    "prompt": "¿Por qué es importante lavarse las manos antes de comer?",
+    "response": "Lavarte las manos elimina gérmenes y microbios que pueden hacerte enfermar si entran a tu cuerpo al comer."
+  },
+  {
+    "prompt": "¿Qué alimentos peruanos me ayudan a crecer?",
+    "response": "Alimentos como la quinua, el choclo, la palta, la papa y las menestras te aportan nutrientes para crecer sano."
+  },
+  {
+    "prompt": "Mi profe dice que la camu camu es buena, ¿por qué?",
+    "response": "La camu camu es muy rica en vitamina C, que ayuda a que no te resfríes y te da energía."
+  },
+  {
+    "prompt": "¿Es bueno comer chifles en el recreo?",
+    "response": "De vez en cuando está bien, pero es mejor comer frutas como naranja o mandarina que tienen vitaminas."
+  },
+  {
+    "prompt": "¿Por qué la leche es buena para los niños?",
+    "response": "La leche contiene calcio y proteínas que ayudan a tener huesos y dientes fuertes."
+  },
+  {
+    "prompt": "¿Qué pasa si no como frutas?",
+    "response": "Si no comes frutas, te perderás de vitaminas importantes que mantienen tu cuerpo sano y tus defensas fuertes."
+  },
+  {
+    "prompt": "¿Qué puedo llevar de lonchera?",
+    "response": "Una lonchera saludable puede tener yogur, trozos de fruta, pan con pollo y un jugo natural sin azúcar."
+  },
+  {
+    "prompt": "¿Qué es mejor, pan integral o pan blanco?",
+    "response": "El pan integral tiene más fibra, que ayuda a tu digestión y te mantiene lleno por más tiempo."
+  },
+  {
+    "prompt": "¿La camote es buena para mí?",
+    "response": "Sí, el camote tiene vitaminas A y C, además de fibra que ayuda a tu pancita."
+  },
+  {
+    "prompt": "¿Por qué no debo comer mucha sal?",
+    "response": "Comer mucha sal puede subir tu presión y dañar tus riñones. Es mejor sazonar con hierbas o limón."
+  },
+  {
+    "prompt": "¿Cómo sé si una comida es saludable?",
+    "response": "Una comida saludable tiene verduras, proteínas (como pollo o pescado) y carbohidratos buenos (como quinua o camote)."
+  },
+  {
+    "prompt": "¿Puedo tomar jugo de frutas envasado?",
+    "response": "Es mejor tomar jugo natural sin azúcar añadida. Los envasados suelen tener mucho azúcar y colorantes."
+  },
+  {
+    "prompt": "¿Qué es una porción adecuada de fruta?",
+    "response": "Una porción de fruta es una pieza mediana, como una manzana o un plátano, o dos orejones de frutas secas."
+  },
+  {
+    "prompt": "¿La yuca es buena para los niños?",
+    "response": "Sí, la yuca es una raíz con carbohidratos y vitaminas que te dan energía para jugar."
+  },
+  {
+    "prompt": "¿Puedo comer postre después de comer?",
+    "response": "Puedes comer un postre pequeño, como una fruta o un yogurt, pero evita postres con mucha azúcar."
+  },
+  {
+    "prompt": "¿Por qué los huevos son buenos?",
+    "response": "Los huevos tienen proteínas de alta calidad que ayudan a tus músculos y al crecimiento."
+  },
+  {
+    "prompt": "¿Qué es mejor comer, lentejas o arroz?",
+    "response": "Ambos son buenos; las lentejas tienen más proteínas y fibras, y el arroz te da energía con sus carbohidratos."
+  },
+  {
+    "prompt": "¿Cómo puedo saber si un jugo es natural?",
+    "response": "Lee la lista de ingredientes: debe decir solo fruta y agua, sin azúcares ni colorantes añadidos."
+  },
+  {
+    "prompt": "¿Por qué me dan hambre rápido?",
+    "response": "Porque tu cuerpo necesita combustible. Comer snacks saludables como fruta o yogurt ayuda a no quedarte con hambre."
+  },
+  {
+    "prompt": "¿Es bueno comer frutos secos?",
+    "response": "Sí, los frutos secos como las nueces y almendras tienen grasas buenas, pero come poca cantidad porque son concentrados."
+  },
+  {
+    "prompt": "¿Por qué las proteínas son importantes?",
+    "response": "Las proteínas ayudan a construir y reparar tus músculos, huesos y piel."
+  },
+  {
+    "prompt": "¿Qué pasa si bebo mucha gaseosa?",
+    "response": "Beber gaseosa con frecuencia puede dañar tus dientes, darte sobrepeso y perder vitaminas."
+  },
+  {
+    "prompt": "¿La chicha morada es saludable?",
+    "response": "La chicha morada hecha en casa con poco azúcar y maíz morado es buena porque tiene antioxidantes."
+  },
+  {
+    "prompt": "¿Puedo comer pan con mantequilla?",
+    "response": "Puedes, pero mejor usa mantequilla de maní o palta para obtener grasas más saludables."
+  },
+  {
+    "prompt": "¿El plátano ayuda a mi pancita?",
+    "response": "Sí, el plátano tiene fibra que ayuda a la digestión y te mantiene regular."
+  },
+  {
+    "prompt": "¿Por qué no debo comer comida chatarra?",
+    "response": "La comida chatarra tiene grasas y azúcares que pueden hacerte sentir cansado y enfermarte."
+  },
+  {
+    "prompt": "¿Qué verduras puedo comer crudas?",
+    "response": "Puedes comer zanahoria, pepino, tomate y pimiento crudos en trozos pequeños y seguros."
+  },
+  {
+    "prompt": "¿La palta es buena para los niños?",
+    "response": "Sí, la palta tiene grasas saludables que ayudan al crecimiento de tu cerebro y tu corazón."
+  },
+  {
+    "prompt": "¿Por qué debo comer despacio?",
+    "response": "Comer despacio ayuda a que tu cuerpo digiera mejor y escuches cuando ya estás lleno."
+  },
+  {
+    "prompt": "¿Las sopas son buenas opciones?",
+    "response": "Sí, las sopas con verduras y pollo son ligeras, nutritivas e hidratantes."
+  },
+  {
+    "prompt": "¿Qué es un cereal saludable?",
+    "response": "Un cereal integral con poca azúcar y acompañado de frutas y leche es una buena opción."
+  },
+  {
+    "prompt": "¿La zanahoria es buena para la vista?",
+    "response": "Sí, la zanahoria tiene vitamina A que ayuda a tus ojos a ver mejor."
+  },
+  {
+    "prompt": "¿Puedo comer chocolate?",
+    "response": "De vez en cuando, una onza de chocolate oscuro está bien, pero no mucho porque tiene azúcar."
+  },
+  {
+    "prompt": "¿Por qué las grasas no siempre son malas?",
+    "response": "Porque algunas grasas, como las del aguacate o nueces, ayudan a tu cuerpo a funcionar bien."
+  },
+  {
+    "prompt": "¿Qué es un snack saludable?",
+    "response": "Un snack saludable puede ser rodajas de pepino, palitos de zanahoria o galletas integrales."
+  },
+  {
+    "prompt": "¿Es bueno comer palomitas de maíz?",
+    "response": "Sí, si las haces en casa sin mucha mantequilla ni sal, son una buena fuente de fibra."
+  },
+  {
+    "prompt": "¿Cómo puedo reducir el azúcar?",
+    "response": "Usa frutas maduras para endulzar, bebe agua en lugar de jugos y evita golosinas frecuentes."
+  },
+  {
+    "prompt": "¿El choclo es nutritivo?",
+    "response": "Sí, el choclo tiene carbohidratos y fibra que te dan energía y ayudan a tu digestión."
+  },
+  {
+    "prompt": "¿Qué debo comer antes de jugar fútbol?",
+    "response": "Antes de jugar, come algo ligero como un plátano o yogurt para tener energía sin pesarte."
+  },
+  {
+    "prompt": "¿Por qué comer pescado varias veces a la semana?",
+    "response": "Porque el pescado tiene proteínas y ácidos grasos buenos que cuidan tu corazón y cerebro."
+  },
+  {
+    "prompt": "¿Las bebidas azucaradas hacen daño?",
+    "response": "Sí, pueden dañar tus dientes, subir tu azúcar en sangre y hacerte sentir más sed."
+  },
+  {
+    "prompt": "¿Qué beneficio tiene la miel natural?",
+    "response": "La miel natural endulza con vitaminas y minerales, pero usa poca cantidad porque sigue siendo dulce."
+  },
+  {
+    "prompt": "¿Qué es mejor, jugo o fruta entera?",
+    "response": "La fruta entera es mejor porque tiene fibra, mientras que el jugo pierde mucha de esa fibra."
+  },
+  {
+    "prompt": "¿Cómo sé si un alimento está vencido?",
+    "response": "Revisa la fecha de vencimiento y observa el color, olor y textura: si cambian, no lo comas."
+  },
+  {
+    "prompt": "¿Qué alimentos me ayudan a concentrarme?",
+    "response": "Alimentos como nueces, plátano y yogurt te dan energía sostenida para concentrarte mejor."
+  },
+  {
+    "prompt": "¿El ají es bueno en la comida?",
+    "response": "El ají en poca cantidad da sabor y vitamina C, pero si pica mucho, puede molestar tu pancita."
+  },
+  {
+    "prompt": "¿Por qué es importante la merienda?",
+    "response": "La merienda te da energía entre el desayuno y el almuerzo, evitando que te sientas débil o distraído."
+  },
+  {
+    "prompt": "¿Qué puedo comer de postre sano?",
+    "response": "Puedes comer un yogur con frutas picadas o un helado de paleta natural sin azúcar añadida."
+  },
+  {
+    "prompt": "¿La chía es buena para mí?",
+    "response": "Sí, la chía tiene fibra y ácidos grasos omega-3 que ayudan a tu corazón y a tu digestión."
+  },
+  {
+    "prompt": "¿Por qué no debo saltarme la comida?",
+    "response": "Saltar comidas te deja sin energía y puede hacer que comas demasiado en la siguiente."
+  },
+  {
+    "prompt": "¿Qué verduras puedo poner en la lonchera?",
+    "response": "Puedes poner zanahoria, pepino, pimiento y tomate en trozos pequeños y fáciles de comer."
+  },
+  {
+    "prompt": "¿Puedo comer semillas como snack?",
+    "response": "Sí, semillas de calabaza o girasol en pequeñas cantidades son ricas en minerales."
+  },
+  {
+    "prompt": "¿La miel es mejor que el azúcar?",
+    "response": "La miel tiene vitaminas y antioxidantes, pero sigue siendo dulce, así que usa poca cantidad."
+  },
+  {
+    "prompt": "¿Qué es un desayuno energético?",
+    "response": "Un desayuno energético puede incluir avena, frutas, nueces y un vaso de leche o yogurt."
+  },
+  {
+    "prompt": "¿Por qué comer despacio ayuda?",
+    "response": "Comer despacio evita que te atragantes y ayuda a tu cerebro a notar cuando ya estás lleno."
+  },
+  {
+    "prompt": "¿La espinaca es buena para los músculos?",
+    "response": "Sí, la espinaca tiene hierro y proteínas que ayudan a tus músculos a crecer fuertes."
+  },
+  {
+    "prompt": "¿Qué frutas son buenas para el desayuno?",
+    "response": "Frutas como papaya, mandarina, melón y piña son jugosas y llenas de vitaminas."
+  },
+  {
+    "prompt": "¿Es bueno comer avena?",
+    "response": "Sí, la avena tiene fibra que ayuda a tu digestión y te mantiene lleno por más tiempo."
+  },
+  {
+    "prompt": "¿Qué es la fibra y para qué sirve?",
+    "response": "La fibra es parte de los vegetales y granos que ayuda a mantener tu pancita saludable."
+  },
+  {
+    "prompt": "¿Puedo comer queso?",
+    "response": "Sí, el queso en pequeñas porciones te da calcio y proteínas, pero no comas demasiado."
+  },
+  {
+    "prompt": "¿Por qué evitar frituras?",
+    "response": "Las frituras tienen mucho aceite que puede hacerte sentir pesado y subir tu colesterol."
+  },
+  {
+    "prompt": "¿La granadilla es buena para mí?",
+    "response": "Sí, la granadilla tiene vitaminas A y C, fibra y es refrescante."
+  },
+  {
+    "prompt": "¿Qué debo comer antes de nadar?",
+    "response": "Antes de nadar, come algo ligero como una fruta o un yogurt para no sentirte pesado."
+  },
+  {
+    "prompt": "¿La caigua es nutritiva?",
+    "response": "Sí, la caigua tiene pocas calorías, mucha agua y fibra, ideal para hidratarte."
+  },
+  {
+    "prompt": "¿Qué es una comida balanceada?",
+    "response": "Una comida balanceada incluye proteínas (carne, menestras), verduras y carbohidratos buenos (quinoa, arroz integral)."
+  },
+  {
+    "prompt": "¿Cómo evito la obesidad infantil?",
+    "response": "Comiendo porciones justas, haciendo ejercicio y evitando alimentos con mucha grasa y azúcar."
+  },
+  {
+    "prompt": "¿Qué es un desayuno alto en proteínas?",
+    "response": "Puede incluir huevos revueltos, queso fresco y un vaso de leche o yogurt griego."
+  },
+  {
+    "prompt": "¿La yema del huevo es saludable?",
+    "response": "Sí, la yema tiene nutrientes como vitamina D, pero come un huevo entero, no solo la clara."
+  },
+  {
+    "prompt": "¿Por qué comer frutas de temporada?",
+    "response": "Porque están más frescas, tienen mejor sabor, nutrientes y suelen ser más económicas."
+  },
+  {
+    "prompt": "¿Qué beneficios tiene la mandarina?",
+    "response": "La mandarina es rica en vitamina C y agua, ideal para hidratarte y fortalecer tu sistema inmunológico."
+  },
+  {
+    "prompt": "¿Qué es un snack bajo en calorías?",
+    "response": "Un snack bajo en calorías puede ser palitos de zanahoria, pepino o una manzana pequeña."
+  },
+  {
+    "prompt": "¿Por qué el pescado de río es saludable?",
+    "response": "El pescado de río como el paiche o la trucha tiene proteínas magras y ácidos grasos que cuidan tu corazón."
+  },
+  {
+    "prompt": "¿Es bueno comer mango?",
+    "response": "Sí, el mango tiene muchas vitaminas A y C, pero come moderadamente porque es dulce."
+  }
+]

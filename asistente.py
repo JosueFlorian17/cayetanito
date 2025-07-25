@@ -5,12 +5,13 @@ import subprocess
 import simpleaudio as sa
 from gtts import gTTS
 from pydub import AudioSegment
+import numpy as np
 import asyncio
 import websockets
 import threading
+import keyboard
 
 # === Configuración ===
-DURACION_GRABACION = 5
 ARCHIVO_ENTRADA = "entrada.wav"
 ARCHIVO_MP3 = "respuesta.mp3"
 ARCHIVO_WAV = "respuesta.wav"
@@ -51,15 +52,36 @@ async def _broadcast(message):
             print("  ➤ Error:", e)
             clients.remove(client)
 
-# === 1. Grabar voz ===
-def grabar_audio(nombre_archivo=ARCHIVO_ENTRADA, duracion=DURACION_GRABACION, fs=16000):
-    print("🎙 Grabando...")
+# === Evento para interrupciones ===
+interrupcion_pendiente = threading.Event()
+
+# === 1. Grabar voz (con tecla CTRL para detener) ===
+def grabar_audio_con_teclas(nombre_archivo=ARCHIVO_ENTRADA, fs=16000):
+    print("🎙 Grabando... Presiona CTRL para detener.")
     sd.default.samplerate = fs
     sd.default.channels = 1
-    audio = sd.rec(int(duracion * fs))
-    sd.wait()
-    scipy.io.wavfile.write(nombre_archivo, fs, audio)
+
+    audio_frames = []
+
+    def callback(indata, frames, time, status):
+        if status:
+            print("⚠️", status)
+        audio_frames.append(indata.copy())
+        if interrupcion_pendiente.is_set():
+            raise sd.CallbackStop
+
+    with sd.InputStream(callback=callback):
+        while not interrupcion_pendiente.is_set():
+            sd.sleep(100)
+
+    if len(audio_frames) == 0:
+        print("❌ No se capturó audio.")
+        return False
+
+    audio_np = np.concatenate(audio_frames, axis=0)
+    scipy.io.wavfile.write(nombre_archivo, fs, audio_np)
     print("✅ Grabación terminada")
+    return True
 
 # === 2. Transcribir ===
 def transcribir(nombre_archivo=ARCHIVO_ENTRADA):
@@ -91,32 +113,60 @@ def preguntar_ollama(prompt_usuario):
         print("⚠️ Error desde Ollama:", result.stderr)
     return result.stdout.strip()
 
-# === 4. Usar gTTS y convertir a WAV ===
+# === 4. Texto a voz ===
+def limpiar_comillas(texto):
+    return texto.replace('"', '').replace("“", "").replace("”", "").replace("'", "")
+
 def texto_a_audio(texto, archivo_mp3=ARCHIVO_MP3, archivo_wav=ARCHIVO_WAV):
     print("🔊 Convirtiendo texto a voz...")
-    tts = gTTS(text=texto, lang='es')
+    texto_limpio = limpiar_comillas(texto)
+    tts = gTTS(text=texto_limpio, lang='es')
     tts.save(archivo_mp3)
     audio = AudioSegment.from_mp3(archivo_mp3)
     audio.export(archivo_wav, format="wav")
     print("✅ Audio generado")
 
-# === 5. Reproducir respuesta ===
+# === 5. Reproducir respuesta (interrumpible con ESPACIO) ===
 def reproducir_audio(archivo=ARCHIVO_WAV):
     print("📢 Reproduciendo respuesta...")
     wave_obj = sa.WaveObject.from_wave_file(archivo)
     play_obj = wave_obj.play()
-    play_obj.wait_done()
+    while play_obj.is_playing():
+        if interrupcion_pendiente.is_set():
+            play_obj.stop()
+            print("⏹ Audio interrumpido por usuario")
+            return
+        sd.sleep(100)
     print("✅ Reproducción terminada")
+
+# === 6. Escuchar tecla ESPACIO para iniciar, CTRL para detener ===
+def esperar_teclas():
+    while True:
+        keyboard.wait("space")
+        interrupcion_pendiente.set()
 
 # === 🚀 Conversación ===
 if __name__ == "__main__":
     print("🔌 Iniciando WebSocket...")
     iniciar_websocket_en_hilo()
-    print("🗣 Asistente iniciado. Di algo... (di 'salir' para terminar)\n")
+
+    print("⌨️ Escuchando tecla ESPACIO para iniciar...")
+    threading.Thread(target=esperar_teclas, daemon=True).start()
 
     while True:
+        print("🕒 Esperando ESPACIO para iniciar grabación...")
+        interrupcion_pendiente.wait()
+        interrupcion_pendiente.clear()
+
         enviar_estado("escuchar")
-        grabar_audio()
+
+        print("⌨️ Presiona CTRL para detener grabación...")
+        keyboard.add_hotkey("ctrl", lambda: interrupcion_pendiente.set())
+        exito = grabar_audio_con_teclas()
+        keyboard.remove_hotkey("ctrl")
+
+        if not exito:
+            continue
 
         enviar_estado("procesar")
         texto_usuario = transcribir()
@@ -131,6 +181,9 @@ if __name__ == "__main__":
 
         enviar_estado("hablar")
         texto_a_audio(respuesta_llm)
+
+        interrupcion_pendiente.clear()
+        print("⌨️ Puedes presionar ESPACIO para interrumpir el audio.")
         reproducir_audio()
 
     print("✅ Asistente finalizado.")

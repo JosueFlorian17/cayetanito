@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Configurador de Aula - Cayetano IA</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: 30px auto; }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+    #output {
+      margin-top: 30px;
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧑‍🏫 Configurador de Aula - Cayetano Nutrición IA</h1>
+
+  <label for="aula">Nombre del aula:</label>
+  <input type="text" id="aula" placeholder="Ej. 3 años A">
+
+  <label for="asamblea">Palabra clave para obtener su atención:</label>
+  <input type="text" id="asamblea" placeholder="Ej. ¡Amiguitos al medio!">
+
+  <label for="temas">Temas aprendidos (separados por comas):</label>
+  <input type="text" id="temas" placeholder="Ej. frutas, colores, hábitos saludables">
+
+  <label for="preferencias">Preferencias locales (separadas por comas):</label>
+  <input type="text" id="preferencias" placeholder="Ej. quinua, mandarina, agua hervida">
+
+  <button onclick="generarJSON()">✨ Generar JSON</button>
+
+  <div id="output"></div>
+
+  <script>
+    function generarJSON() {
+      const aula = document.getElementById("aula").value.trim();
+      const asamblea = document.getElementById("asamblea").value.trim();
+      const temas = document.getElementById("temas").value.split(",").map(s => s.trim()).filter(s => s);
+      const preferencias = document.getElementById("preferencias").value.split(",").map(s => s.trim()).filter(s => s);
+
+      const config = {
+        aula: aula,
+        palabra_clave_asamblea: asamblea,
+        temas_aprendidos: temas,
+        preferencias_locales: preferencias
+      };
+
+      document.getElementById("output").textContent = JSON.stringify(config, null, 2);
+    }
+  </script>
+
+</body>
+</html>

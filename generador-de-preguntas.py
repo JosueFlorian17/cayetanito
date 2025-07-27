@@ -1,23 +1,19 @@
 from unsloth import FastLanguageModel
-from transformers import TextStreamer
 from peft import PeftModel
+from transformers import TextStreamer
 
-# 1. Cargar modelo base
+# Cargar modelo base
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = "google/gemma-3-4b-it",
-    max_seq_length = 2048,
-    dtype = None,
-    load_in_4bit = True,
+    model_name="google/gemma-3-4b-it",
+    max_seq_length=2048,
+    dtype=None,
+    load_in_4bit=True,
 )
 
-# 2. Cargar el adapter LoRA desde la ruta local
+# Cargar adapter
 model = PeftModel.from_pretrained(model, "./")
 model.eval()
 
-# 3. Streamer para mostrar texto mientras se genera
-streamer = TextStreamer(tokenizer, skip_prompt=True, skip_special_tokens=True)
-
-# 4. Bucle interactivo
 print("👦 Escribe tu pregunta para Cayetanito (o escribe 'salir' para terminar)\n")
 while True:
     pregunta = input("Tú: ")
@@ -25,15 +21,37 @@ while True:
         print("👋 ¡Hasta pronto!")
         break
 
-    prompt = f"<s>[INST] {pregunta} [/INST]"
+    prompt = f"<s>[INST] {pregunta.strip()} [/INST]"
     inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
 
-    model.generate(
+    outputs = model.generate(
         **inputs,
-        streamer=streamer,
-        max_new_tokens=100,
+        max_new_tokens=200,
         do_sample=True,
         temperature=0.7,
         top_p=0.9,
+        eos_token_id=tokenizer.eos_token_id,
     )
-    print()  # salto de línea tras la respuesta
+
+    decoded = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+    # 🧠 Extraer texto luego de [/INST]
+    if "[/INST]" in decoded:
+        respuesta_raw = decoded.split("[/INST]", 1)[1].strip()
+    else:
+        respuesta_raw = decoded.strip()
+
+    # 🧼 Cortar antes de cualquier nueva pregunta o instrucción
+    stop_tokens = ["<s>[INST]", "\nTú:", "¿Por", "Qué", "cómo", "Cuándo", "Dónde", "Quién", "Cuál"]
+    corte = len(respuesta_raw)
+    for token in stop_tokens:
+        idx = respuesta_raw.find(token)
+        if idx != -1:
+            corte = min(corte, idx)
+
+    respuesta_final = respuesta_raw[:corte].strip()
+
+    # Limpiar tokens extra
+    respuesta_final = respuesta_final.replace("<s>", "").replace("</s>", "").strip()
+
+    print(f"Cayetanito: {respuesta_final}\n")
